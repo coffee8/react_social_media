@@ -3,9 +3,9 @@ import headerIcon from './fb_logo.png'
 
 const Header = () => {
     return (
-        <div className={style.header}>
-            <img className={style.img} src={headerIcon} alt="logo"/>
-        </div>
+            <div className={style.header}>
+                <img className={style.img} src={headerIcon} alt="logo"/>
+            </div>
     )
 }
 

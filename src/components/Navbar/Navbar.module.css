@@ -4,7 +4,19 @@
 }
 
 .item {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.link {
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.2s;
     color: darkblue;
+}
+
+.link:hover {
+    opacity: 1;
 }
 
 .active {

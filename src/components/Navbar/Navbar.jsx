@@ -3,20 +3,20 @@ import navbar from './Navbar.module.css'
 const Navbar = () => {
     return (
         <div className={navbar.navbar}>
-            <div>
-                <a href="#">Profile</a>
+            <div className={navbar.item}>
+                <a className={navbar.link} href="/profile">Profile</a>
             </div>
-            <div>
-                <a href="#">Messages</a>
+            <div className={navbar.item}>
+                <a className={navbar.link} href="/dialogs">Dialogs</a>
             </div>
-            <div>
-                <a href="#">News</a>
+            <div className={navbar.item}>
+                <a className={navbar.link} href="#">News</a>
             </div>
-            <div>
-                <a href="#">Music</a>
+            <div className={navbar.item}>
+                <a className={navbar.link} href="#">Music</a>
             </div>
-            <div>
-                <a href="#">Settings</a>
+            <div className={navbar.item}>
+                <a className={navbar.link} href="#">Settings</a>
             </div>
         </div>
     )

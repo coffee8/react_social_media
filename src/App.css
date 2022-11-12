@@ -1,13 +1,17 @@
-.appWrapper {
+.app-wrapper {
     display: grid;
 
     grid-template-areas:
     "header header"
-    "navbar profile";
+    "navbar content_";
     grid-template-rows: 60px 600px;
     grid-template-columns: 2fr 10fr;
 }
 
+.app-wrapper-content {
+    grid-area: content_;
+    background-color: aliceblue;
+}
 
 
 
