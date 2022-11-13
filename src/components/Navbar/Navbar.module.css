@@ -6,6 +6,7 @@
 .item {
     margin-left: 20px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .link {
@@ -19,6 +20,6 @@
     opacity: 1;
 }
 
-.active {
+.activeStyle {
     color: brown;
 }
