@@ -1,6 +1,9 @@
-import style from './MyPosts.module.css';
 import Post from './Post/Post';
-const MyPosts = () => {
+
+const MyPosts = (props) => {
+
+    const posts = props.postData.map(data => <Post message={data.message} likeCount={data.likeCount}/>)
+
     return (
         <div>
             <div>My posts</div>
@@ -10,9 +13,9 @@ const MyPosts = () => {
                 </div>
                 <button>Add post</button>
             </div>
-            <Post message = 'hi' likeCount = '25'/>
-            <Post message = 'I am exited about react' likeCount = '3'/>
-            <Post message = 'jsx' likeCount = '15'/>
+            <div>
+                {posts}
+            </div>
         </div>
     )
 }

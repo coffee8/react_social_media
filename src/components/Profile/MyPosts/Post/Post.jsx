@@ -1,5 +1,6 @@
 import style from './Post.module.css'
 import profile_picture from '../../profile_picture.jpeg'
+
 const Post = (props) => {
     return (
         <div className={style.container}>

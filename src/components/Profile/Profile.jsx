@@ -1,7 +1,8 @@
 import style from './Profile.module.css'
 import profilePicture from './profile_picture.jpeg'
 import MyPosts from "./MyPosts/MyPosts";
-const Profile = () => {
+
+const Profile = (props) => {
     return (
         <div className={style.profile}>
             <div>
@@ -9,7 +10,7 @@ const Profile = () => {
                 alt="profile"/>
             </div>
            Profile
-            <MyPosts/>
+            <MyPosts postData={props.postData}/>
         </div>
     );
 }
