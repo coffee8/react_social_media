@@ -12,9 +12,10 @@ function App(props) {
                 <Header/>
                 <Navbar/>
                 <Routes className="app-wrapper-content">
-                        <Route path='/profile/*' element={<Profile postData={props.state.postData}/>}/>
-                        <Route path='/dialogs/*' element={<Dialogs dialogData={props.state.dialogData}
-                                                                   messageData={props.state.messageData}/>}/>
+                        <Route path='/profile/*' element={<Profile postData={props.state.profilePage.postData}
+                                                                   addPost={props.addPost}/>}/>
+                        <Route path='/dialogs/*' element={<Dialogs dialogData={props.state.dialogPage.dialogData}
+                                                                   messageData={props.state.dialogPage.messageData}/>}/>
                 </Routes>
 
             </div>
