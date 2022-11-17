@@ -14,8 +14,8 @@ function App(props) {
                 <Routes className="app-wrapper-content">
                         <Route path='/profile/*' element={<Profile postData={props.state.profilePage.postData}
                                                                    dispatch={props.dispatch}
-                                                                   addPost={props.addPost}
-                                                                   updateNewPostText={props.updateNewPostText}
+                                                                   onPostChangeActionCreator={props.onPostChangeActionCreator}
+                                                                   addPostActionCreator={props.addPostActionCreator}
                                                                    newPostText={props.state.profilePage.newPostText}/>}/>
                         <Route path='/dialogs/*' element={<Dialogs dialogData={props.state.dialogPage.dialogData}
                                                                    messageData={props.state.dialogPage.messageData}/>}/>

@@ -1,6 +1,6 @@
 //Trying to create my own Redux and implement Flux architecture before using Redux library
 
-const ADD_POST = 'ADD-POST';
+const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
 
 const store = {
@@ -52,6 +52,8 @@ const store = {
         }
     }
 }
+export const addPostActionCreator = () => ({type: ADD_POST});
 
+export const onPostChangeActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, postText: text});
 
 export default store;
