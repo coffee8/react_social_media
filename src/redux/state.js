@@ -1,5 +1,8 @@
 //Trying to create my own Redux and implement Flux architecture before using Redux library
 
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
+
 const store = {
     _state: {
         dialogPage: {
@@ -40,6 +43,14 @@ const store = {
     subscribe(observer) {
         this._callSubscriber = observer;
     },
+
+    dispatch(action) {
+        if (action.type === ADD_POST) {
+            this.addPost();
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
+            this.updateNewPostText(action.postText);
+        }
+    }
 }
 
 

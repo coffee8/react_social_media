@@ -6,12 +6,12 @@ const MyPosts = (props) => {
     const newPostElement = React.createRef(); //not recommended to use
 
     const addPost = () => {
-        props.addPost();
+        props.dispatch({type: 'ADD-POST'});
     }
 
     const onPostChange = () => {
         const text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        props.dispatch({type: 'UPDATE_NEW_POST_TEXT', postText: text});
     }
 
     const posts = props.postData.map(data => <Post message={data.message}

@@ -13,6 +13,7 @@ function App(props) {
                 <Navbar/>
                 <Routes className="app-wrapper-content">
                         <Route path='/profile/*' element={<Profile postData={props.state.profilePage.postData}
+                                                                   dispatch={props.dispatch}
                                                                    addPost={props.addPost}
                                                                    updateNewPostText={props.updateNewPostText}
                                                                    newPostText={props.state.profilePage.newPostText}/>}/>
