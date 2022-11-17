@@ -12,13 +12,21 @@ function App(props) {
                 <Header/>
                 <Navbar/>
                 <Routes className="app-wrapper-content">
-                        <Route path='/profile/*' element={<Profile postData={props.state.profilePage.postData}
-                                                                   dispatch={props.dispatch}
-                                                                   onPostChangeActionCreator={props.onPostChangeActionCreator}
-                                                                   addPostActionCreator={props.addPostActionCreator}
-                                                                   newPostText={props.state.profilePage.newPostText}/>}/>
-                        <Route path='/dialogs/*' element={<Dialogs dialogData={props.state.dialogPage.dialogData}
-                                                                   messageData={props.state.dialogPage.messageData}/>}/>
+                    <Route path='/profile/*'
+                           element={<Profile postData={props.state.profilePage.postData}
+                                             dispatch={props.dispatch}
+                                             onPostChangeActionCreator={props.onPostChangeActionCreator}
+                                             addPostActionCreator={props.addPostActionCreator}
+                                             newPostText={props.state.profilePage.newPostText}
+                           />}/>
+                    <Route path='/dialogs/*'
+                           element={<Dialogs dialogData={props.state.dialogPage.dialogData}
+                                             dispatch={props.dispatch}
+                                             messageData={props.state.dialogPage.messageData}
+                                             newMessageText={props.state.dialogPage.newMessageText}
+                                             onUpdateMessageTextActionCreator={props.onUpdateMessageTextActionCreator}
+                                             sendMessageActionCreator={props.sendMessageActionCreator}
+                           />}/>
                 </Routes>
 
             </div>

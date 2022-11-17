@@ -1,7 +1,12 @@
 import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import store, {addPostActionCreator, onPostChangeActionCreator} from "./redux/state";
+import store, {
+    addPostActionCreator,
+    onUpdateMessageTextActionCreator,
+    onPostChangeActionCreator,
+    sendMessageActionCreator
+} from "./redux/state";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
@@ -13,7 +18,10 @@ const renderEntireTree = (state) => {
             <App state={state}
                  dispatch={store.dispatch.bind(store)}
                  addPostActionCreator={addPostActionCreator}
-                 onPostChangeActionCreator={onPostChangeActionCreator}/>
+                 onPostChangeActionCreator={onPostChangeActionCreator}
+                 sendMessageActionCreator={sendMessageActionCreator}
+                 onUpdateMessageTextActionCreator={onUpdateMessageTextActionCreator}
+            />
         </React.StrictMode>
     );
 }
