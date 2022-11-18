@@ -1,9 +1,7 @@
 //Trying to create my own Redux and implement Flux architecture before using Redux library
 
-const ADD_POST = 'ADD_POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
-const SEND_MESSAGE = 'SEND_MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE_NEW_MESSAGE_TEXT';
+import dialogReducer from "./DialogReducer";
+import profileReducer from "./ProfileReducer";
 
 const store = {
     _state: {
@@ -34,59 +32,15 @@ const store = {
         return this._state;
     },
 
-    addPost() {
-        const newPost = {
-            id: 4,
-            message: this._state.profilePage.newPostText,
-            likeCount: 0
-        }
-        this._state.profilePage.postData.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._callSubscriber(this._state);
-    },
-
-    updateNewPostText(postText) {
-        this._state.profilePage.newPostText = postText;
-        this._callSubscriber(this._state);
-    },
-
-    sendMessage() {
-        const newMessageText = {
-            id: 4,
-            message: this._state.dialogPage.newMessageText,
-        }
-        this._state.dialogPage.messageData.push(newMessageText);
-        this._state.dialogPage.newMessageText = '';
-        this._callSubscriber(this._state);
-    },
-
-    onUpdateMessageText(newMessageText) {
-        this._state.dialogPage.newMessageText = newMessageText;
-        this._callSubscriber(this._state);
-    },
-
     subscribe(observer) {
         this._callSubscriber = observer;
     },
 
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            this.addPost();
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this.updateNewPostText(action.postText);
-        } else if (action.type === SEND_MESSAGE) {
-            this.sendMessage();
-        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-            this.onUpdateMessageText(action.newMessageText);
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogPage = dialogReducer(this._state.dialogPage, action);
+        this._callSubscriber(this._state);
     }
 }
-export const addPostActionCreator = () => ({type: ADD_POST});
-
-export const onPostChangeActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, postText: text});
-
-export const sendMessageActionCreator = () => ({type: SEND_MESSAGE});
-
-export const onUpdateMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newMessageText: text});
 
 export default store;

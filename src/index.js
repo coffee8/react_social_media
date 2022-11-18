@@ -1,14 +1,11 @@
 import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import store, {
-    addPostActionCreator,
-    onUpdateMessageTextActionCreator,
-    onPostChangeActionCreator,
-    sendMessageActionCreator
-} from "./redux/state";
+import store from "./redux/state";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import {onUpdateMessageTextActionCreator, sendMessageActionCreator} from "./redux/DialogReducer";
+import {addPostActionCreator, onPostChangeActionCreator} from "./redux/ProfileReducer";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
