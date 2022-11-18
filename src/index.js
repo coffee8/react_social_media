@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import store from "./redux/state";
+import store from "./redux/ReduxStore";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import {onUpdateMessageTextActionCreator, sendMessageActionCreator} from "./redux/DialogReducer";
@@ -25,7 +25,10 @@ const renderEntireTree = (state) => {
 
 renderEntireTree(store.getState());
 
-store.subscribe(renderEntireTree)
+store.subscribe(() => {
+    const state = store.getState();
+    renderEntireTree(state);
+})
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
