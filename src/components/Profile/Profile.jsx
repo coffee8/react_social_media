@@ -1,6 +1,6 @@
 import style from './Profile.module.css'
 import profilePicture from './profile_picture.jpeg'
-import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
     return (
@@ -10,7 +10,7 @@ const Profile = (props) => {
                 alt="profile"/>
             </div>
            Profile
-            <MyPosts postData={props.postData}
+            <MyPostsContainer postData={props.postData}
                      dispatch={props.dispatch}
                      addPostActionCreator={props.addPostActionCreator}
                      onPostChangeActionCreator={props.onPostChangeActionCreator}

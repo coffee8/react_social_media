@@ -4,13 +4,13 @@ import React from "react";
 const MyPosts = (props) => {
     const newPostElement = React.createRef(); //not recommended to use
 
-    const addPost = () => {
-        props.dispatch(props.addPostActionCreator());
+    const onAddPost = () => {
+        props.addPost();
     }
 
     const onPostChange = () => {
         const text = newPostElement.current.value;
-        props.dispatch(props.onPostChangeActionCreator(text));
+        props.onPostChange(text);
     }
 
     const posts = props.postData.map(data => <Post message={data.message}
@@ -23,11 +23,11 @@ const MyPosts = (props) => {
             <div>
                 <div>
                     <textarea placeholder="your text"
-                              ref={ newPostElement }
-                              onChange={ onPostChange }
+                              ref={newPostElement}
+                              onChange={onPostChange}
                               value={props.newPostText}/>
                 </div>
-                <button onClick={ addPost }>Add post</button>
+                <button onClick={onAddPost}>Add post</button>
             </div>
             <div>
                 {posts}
