@@ -4,6 +4,7 @@ import Profile from './components/Profile/Profile.jsx';
 import Navbar from "./components/Navbar/Navbar";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 function App(props) {
     return (
@@ -20,7 +21,7 @@ function App(props) {
                                              newPostText={props.state.profilePage.newPostText}
                            />}/>
                     <Route path='/dialogs/*'
-                           element={<Dialogs dialogData={props.state.dialogPage.dialogData}
+                           element={<DialogsContainer dialogData={props.state.dialogPage.dialogData}
                                              dispatch={props.dispatch}
                                              messageData={props.state.dialogPage.messageData}
                                              newMessageText={props.state.dialogPage.newMessageText}

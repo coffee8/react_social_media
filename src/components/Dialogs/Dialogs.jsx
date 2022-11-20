@@ -7,12 +7,12 @@ const Dialogs = (props) => {
 
     const messageTextUpdate = React.createRef();
 
-    const sendMessage = () => {
-        props.dispatch(props.sendMessageActionCreator());
+    const onSendMessage = () => {
+        props.sendMessage();
     }
 
     const onUpdateMessageText = () => {
-        props.dispatch(props.onUpdateMessageTextActionCreator(messageTextUpdate.current.value));
+        props.updateMessageText(messageTextUpdate.current.value);
     }
     const dialogs = props.dialogData.map(d => <DialogItem key={d.id} name={d.name} id={d.id}/>)
     const messages = props.messageData.map(message => <Message message={message.message}/>)
@@ -32,7 +32,7 @@ const Dialogs = (props) => {
                 value={props.newMessageText}
                 ref={messageTextUpdate}
                 onChange={ onUpdateMessageText }/>
-                <button onClick={ sendMessage }>Send</button>
+                <button onClick={ onSendMessage }>Send</button>
             </div>
 
         </div>
