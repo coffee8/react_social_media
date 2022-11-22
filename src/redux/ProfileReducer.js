@@ -18,15 +18,16 @@ const profileReducer = (state = initialState, action) => {
                 message: state.newPostText,
                 likeCount: 0
             };
-            const stateCopy = {...state};
-            stateCopy.postData = [...state.postData]
-            stateCopy.postData.push(newPost);
-            stateCopy.newPostText = '';
-            return stateCopy;
+            return {
+                ...state,
+                postData: [...state.postData, newPost],
+                newPostText: ''
+            };
         case UPDATE_NEW_POST_TEXT: {
-            const stateCopy = {...state};
-            stateCopy.newPostText = action.postText;
-            return stateCopy;
+            return {
+                ...state,
+                newPostText: action.postText
+            };
         }
     }
 
@@ -36,6 +37,5 @@ const profileReducer = (state = initialState, action) => {
 export const addPostActionCreator = () => ({type: ADD_POST});
 
 export const onPostChangeActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, postText: text});
-
 
 export default profileReducer;
