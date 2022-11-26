@@ -1,11 +1,9 @@
 .navbar {
-    grid-area: navbar;
     background-color: peachpuff;
 }
 
 .item {
     margin-left: 20px;
-    margin-top: 20px;
     font-weight: bold;
 }
 

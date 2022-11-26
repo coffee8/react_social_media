@@ -24,7 +24,7 @@ const dialogReducer = (state = initialState, action) => {
             return {
                 ...state,
                 messageData: [...state.messageData, newMessage],
-                newPostText: ''
+                newMessageText: ''
             };
         }
         case UPDATE_NEW_MESSAGE_TEXT: {
