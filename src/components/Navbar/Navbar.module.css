@@ -1,5 +1,7 @@
 .navbar {
+    grid-area: navbar;
     background-color: peachpuff;
+    display: grid;
 }
 
 .item {

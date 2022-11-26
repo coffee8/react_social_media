@@ -17,6 +17,11 @@ const Navbar = () => {
                 </NavLink>
             </div>
             <div className={style.item}>
+                <NavLink className={navData => navData.isActive ? style.activeStyle : style.link} to="/people">
+                    People
+                </NavLink>
+            </div>
+            <div className={style.item}>
                 <NavLink className={navData => navData.isActive ? style.activeStyle : style.link} to="/news">
                     News
                 </NavLink>
