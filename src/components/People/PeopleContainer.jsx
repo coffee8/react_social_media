@@ -1,6 +1,7 @@
 import People from "./People";
 import {connect} from "react-redux";
 import React from "react";
+import {setUsersActionCreator, toggleFollowActionCreator} from "../../redux/PeopleReducer";
 
 
 const mapStateToProps = (state) => {
@@ -10,9 +11,11 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {}
+    return {
+        toggleFollow: (userId) => dispatch(toggleFollowActionCreator(userId)),
+        setUsers: () => dispatch(setUsersActionCreator())
+    }
 }
-
 
 const PeopleContainer = connect(mapStateToProps, mapDispatchToProps)(People);
 

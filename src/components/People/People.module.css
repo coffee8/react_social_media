@@ -1,6 +1,6 @@
 .people {
     grid-area: mainPage;
-    background-color: blue;
+    background-color: navajowhite;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
