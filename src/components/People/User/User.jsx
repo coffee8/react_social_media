@@ -1,6 +1,6 @@
-import styles from './Users.module.css'
+import styles from './User.module.css'
 
-const Users = (props) => {
+const User = (props) => {
 
     const onToggleFollow = (userId) => {
         props.toggleFollow(userId);
@@ -21,4 +21,4 @@ const Users = (props) => {
     )
 }
 
-export default Users;
+export default User;
