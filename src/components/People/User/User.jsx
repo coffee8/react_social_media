@@ -1,24 +1,30 @@
 import styles from './User.module.css'
+import userIcon from './../../../userIcon.png'
+import React from 'react'
 
-const User = (props) => {
-
-    const onToggleFollow = (userId) => {
-        props.toggleFollow(userId);
+class User extends React.Component {
+    constructor(props) {
+        super(props);
+        this.props = props;
     }
 
-    return (
-        <div className={styles.color}>
-            <div>{props.userImage}</div>
-            <div>{props.userName}</div>
-            <div>{props.userCity}</div>
-            <div>{props.userStatus}</div>
+    onToggleFollow = (userId) => {
+        this.props.toggleFollow(userId);
+    }
+
+    render() {
+        return (<div className={styles.user}>
+            <div></div>
+            <div>{this.props.userName}</div>
+            <div>{this.props.userStatus !== null ? this.props.userStatus : 'status is empty'}</div>
+            <div><img src={this.props.userImage !== null ? this.props.userImage : userIcon} alt=""/></div>
             <div>
-                {props.followed ?
-                    <button onClick={()=>onToggleFollow(props.userId)}>Unfollow</button> :
-                    <button onClick={()=>onToggleFollow(props.userId)}>Follow</button>}
+                {this.props.followed ?
+                    <button onClick={() => this.onToggleFollow(this.props.userId)}>Unfollow</button> :
+                    <button onClick={() => this.onToggleFollow(this.props.userId)}>Follow</button>}
             </div>
-        </div>
-    )
+        </div>);
+    }
 }
 
 export default User;

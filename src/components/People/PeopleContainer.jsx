@@ -6,14 +6,14 @@ import {setUsersActionCreator, toggleFollowActionCreator} from "../../redux/Peop
 
 const mapStateToProps = (state) => {
     return {
-        usersData: state.peoplePage.usersData
+        users: state.peoplePage.users
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         toggleFollow: (userId) => dispatch(toggleFollowActionCreator(userId)),
-        setUsers: () => dispatch(setUsersActionCreator())
+        setUsers: (users) => dispatch(setUsersActionCreator(users))
     }
 }
 
