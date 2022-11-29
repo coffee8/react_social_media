@@ -1,7 +1,15 @@
 .people {
     grid-area: mainPage;
     background-color: navajowhite;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    /*display: grid;*/
+    /*grid-template-rows: 1fr 5fr;*/
+    /*grid-template-columns: 1fr;*/
+}
+
+img {
+    width: 50px;
+}
+
+.page {
+    font-weight: bold;
 }
