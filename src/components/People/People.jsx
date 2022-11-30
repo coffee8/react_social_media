@@ -24,7 +24,7 @@ const People = (props) => {
                     props.users.map((data) => {
                             return <div>
                                 <div>{data.name}</div>
-                                <div>{data.status !== null ? this.props.status : 'status is empty'}</div>
+                                <div>{data.status !== null ? props.status : 'status is empty'}</div>
                                 <div><img src={data.photos.small !== null ? data.photos.small : userIcon} alt=""/>
                                 </div>
                                 <div>
