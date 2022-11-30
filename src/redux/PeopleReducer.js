@@ -12,7 +12,6 @@ const initialState = {
 }
 
 const peopleReducer = (state = initialState, action) => {
-    debugger
     switch (action.type) {
         case TOGGLE_FOLLOW: {
             return {
@@ -29,7 +28,7 @@ const peopleReducer = (state = initialState, action) => {
         case SET_USERS: {
             return {
                 ...state,
-                users: [...action.users]
+                users: action.users
             }
         }
 
