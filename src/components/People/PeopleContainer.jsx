@@ -8,7 +8,8 @@ import {
     toggleFollowActionCreator
 } from "../../redux/PeopleReducer";
 import axios from "axios";
-import loadingLogo from "../../loading_logo.svg"
+import Preloader from "../Common/Preloader/Preloader";
+import styles from "./People.module.css"
 
 class PeopleContainer extends React.Component {
 
@@ -44,14 +45,15 @@ class PeopleContainer extends React.Component {
     }
 
     render() {
-        return <>   {this.props.isFetching ? <img src={loadingLogo}/> : null}
-        <People totalUsersCount={this.props.totalUsersCount}
-                       pageSize={this.props.pageSize}
-                       currentPage={this.props.currentPage}
-                       onSetCurrentPage={this.onSetCurrentPage}
-                       onToggleFollow={this.onToggleFollow}
-                       users={this.props.users}
-        />
+        return <>   {this.props.isFetching ? <Preloader /> : null}
+            <People className={styles.people}
+                totalUsersCount={this.props.totalUsersCount}
+                    pageSize={this.props.pageSize}
+                    currentPage={this.props.currentPage}
+                    onSetCurrentPage={this.onSetCurrentPage}
+                    onToggleFollow={this.onToggleFollow}
+                    users={this.props.users}
+            />
         </>
     }
 }

@@ -12,7 +12,7 @@ const People = (props) => {
     }
 
     return (
-        <div className={styles.people}>
+        <div>
             <div>
                 {pages.map(p => {
                     return p < 10 ? <span className={props.currentPage === p && styles.page}

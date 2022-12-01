@@ -1,9 +1,12 @@
 .people {
     grid-area: mainPage;
     background-color: navajowhite;
-    /*display: grid;*/
+    display: grid;
     /*grid-template-rows: 1fr 5fr;*/
     /*grid-template-columns: 1fr;*/
+    /*grid-template-areas:*/
+    /*        "pages"*/
+    /*        "people";*/
 }
 
 img {
