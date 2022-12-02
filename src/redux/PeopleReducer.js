@@ -59,14 +59,14 @@ const peopleReducer = (state = initialState, action) => {
     return state;
 }
 
-export const toggleFollowActionCreator = (userId) => ({type: TOGGLE_FOLLOW, userId});
+export const toggleFollow = (userId) => ({type: TOGGLE_FOLLOW, userId});
 
-export const setUsersActionCreator = (users) => ({type: SET_USERS, users});
+export const setUsers = (users) => ({type: SET_USERS, users});
 
-export const setCurrentPageActionCreator = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
 
-export const setTotalUsersCountActionCreator = (totalUsers) => ({type: SET_TOTAL_USERS_COUNT, totalUsers});
+export const setTotalUsersCount = (totalUsers) => ({type: SET_TOTAL_USERS_COUNT, totalUsers});
 
-export const toggleFetchingActionCreator = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
+export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 
 export default peopleReducer;
