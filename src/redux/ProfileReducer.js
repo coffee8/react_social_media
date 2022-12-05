@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
+const SET_PROFILE_INFO = 'SET_PROFILE_INFO';
 
 const initialState = {
     postData:
@@ -7,10 +8,10 @@ const initialState = {
             {message: 'I am excited about react!', likeCount: 3, id: 2},
             {message: 'react is cool', likeCount: 123213, id: 3}],
     newPostText: '',
+    profileInfo: null,
 }
 
 const profileReducer = (state = initialState, action) => {
-
     switch (action.type) {
         case ADD_POST:
             const newPost = {
@@ -29,6 +30,13 @@ const profileReducer = (state = initialState, action) => {
                 newPostText: action.postText
             };
         }
+
+        case SET_PROFILE_INFO: {
+            return {
+                ...state,
+                profileInfo: action.profileInfo
+            };
+        }
     }
 
     return state;
@@ -37,5 +45,7 @@ const profileReducer = (state = initialState, action) => {
 export const addPostActionCreator = () => ({type: ADD_POST});
 
 export const onPostChangeActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, postText: text});
+
+export const setProfileInfo = (profileInfo) => ({type: SET_PROFILE_INFO, profileInfo});
 
 export default profileReducer;

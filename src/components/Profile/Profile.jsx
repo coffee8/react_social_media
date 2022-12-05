@@ -1,20 +1,12 @@
 import style from './Profile.module.css'
-import profilePicture from './profile_picture.jpeg'
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
     return (
         <div className={style.profile}>
-            <div>
-                <img src={profilePicture} className={style.img}
-                alt="profile"/>
-            </div>
-           Profile
-            <MyPostsContainer postData={props.postData}
-                     dispatch={props.dispatch}
-                     addPostActionCreator={props.addPostActionCreator}
-                     onPostChangeActionCreator={props.onPostChangeActionCreator}
-                     newPostText={props.newPostText}/>
+            <ProfileInfo profileInfo={props.profileInfo}/>
+            <MyPostsContainer />
         </div>
     );
 }

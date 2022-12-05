@@ -1,6 +1,7 @@
 import styles from './People.module.css'
 import React from "react";
 import userIcon from "../../userIcon.png";
+import {NavLink} from "react-router-dom";
 
 const People = (props) => {
 
@@ -23,10 +24,13 @@ const People = (props) => {
                 {
                     props.users.map((data) => {
                             return <div>
+                                <NavLink to={'./../profile/' + data.id}>
+                                    <div>
+                                        <img src={data.photos.small !== null ? data.photos.small : userIcon} alt=""/>
+                                    </div>
+                                </NavLink>
                                 <div>{data.name}</div>
                                 <div>{data.status !== null ? props.status : 'status is empty'}</div>
-                                <div><img src={data.photos.small !== null ? data.photos.small : userIcon} alt=""/>
-                                </div>
                                 <div>
                                     {data.followed ?
                                         <button onClick={() => props.onToggleFollow(data.id)}>Unfollow</button> :
