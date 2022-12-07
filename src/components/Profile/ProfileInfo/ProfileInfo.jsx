@@ -1,6 +1,6 @@
 import style from "../Profile.module.css";
 import Preloader from "../../Common/Preloader/Preloader";
-
+import userIcon from "../../../userIcon.png"
 
 const ProfileInfo = (props) => {
 
@@ -10,9 +10,13 @@ const ProfileInfo = (props) => {
 
     return (
         <div>
-                <img src={''} className={style.img}
-                     alt="profile"/>
-            <p>{props.profileInfo.fullName}</p>
+            <div><img src={props.profileInfo.photos.large == null ? userIcon : props.profileInfo.photos.large}
+                      className={style.img}
+                      alt="profile"/></div>
+            <div>{'Name: ' + props.profileInfo.fullName}</div>
+            <div>{'About me: ' + props.profileInfo.aboutMe}</div>
+            <div>{`Looking for a job: ${props.profileInfo.lookingForAJob ? 'yes' : 'no'}`}</div>
+
         </div>
     )
 }
