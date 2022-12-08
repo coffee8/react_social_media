@@ -1,4 +1,4 @@
-const SET_USER_DATA = "SET_USER_DATA";
+const SET_AUTH_USER_DATA = "SET_AUTH_USER_DATA";
 
 const initialState = {
     id: null,
@@ -9,7 +9,7 @@ const initialState = {
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_USER_DATA:
+        case SET_AUTH_USER_DATA:
         return {
             ...state,
             id: action.id,
@@ -23,4 +23,6 @@ const authReducer = (state = initialState, action) => {
     return state;
 }
 
-export const setUserData = ({id, email, login}) => ({type: SET_USER_DATA, id, email, login});
+export const setAuthUserData = ({id, email, login}) => ({type: SET_USER_DATA, id, email, login});
+
+export default authReducer;
