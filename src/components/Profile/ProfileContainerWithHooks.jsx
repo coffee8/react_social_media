@@ -3,7 +3,7 @@ import Profile from "./Profile";
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {setProfileInfo} from "../../redux/ProfileReducer";
-import {useNavigate, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 const ProfileContainerWithHooks = (props) => {
 
