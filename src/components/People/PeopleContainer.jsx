@@ -11,6 +11,7 @@ import {
 import axios from "axios";
 import Preloader from "../Common/Preloader/Preloader";
 import styles from "./People.module.css"
+import {usersAPI} from "../../api/api";
 
 class PeopleContainer extends React.Component {
 
@@ -23,10 +24,10 @@ class PeopleContainer extends React.Component {
     componentDidMount() {
         if (this.props.users.length === 0) {
             this.props.toggleIsFetching(true);
-            axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
+            usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
                 this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
-                this.props.setTotalUsersCount(response.data.totalCount);
+                this.props.setUsers(data.items);
+                this.props.setTotalUsersCount(data.totalCount);
             });
         }
     }
