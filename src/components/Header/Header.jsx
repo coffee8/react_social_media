@@ -3,8 +3,8 @@ import headerIcon from './fb_logo.png'
 import {NavLink} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import axios from "axios";
 import {setAuthUserData} from "../../redux/AuthReducer";
+import {usersAPI} from "../../api/api";
 
 const Header = () => {
 
@@ -12,12 +12,10 @@ const Header = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        axios.get('https://social-network.samuraijs.com/api/1.0/auth/me',
-            {withCredentials: true})
-            .then(response => {
-                if (response.data.resultCode === 0)
-                    dispatch(setAuthUserData(response.data.data))
-            })
+        usersAPI.auth().then(data => {
+            if (data.resultCode === 0)
+                dispatch(setAuthUserData(data.data))
+        })
     }, [dispatch])
 
     return (

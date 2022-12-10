@@ -8,7 +8,6 @@ import {
     toggleIsFetching,
     toggleFollow
 } from "../../redux/PeopleReducer";
-import axios from "axios";
 import Preloader from "../Common/Preloader/Preloader";
 import styles from "./People.module.css"
 import {usersAPI} from "../../api/api";
@@ -39,7 +38,7 @@ class PeopleContainer extends React.Component {
     onSetCurrentPage = (pageNumber) => {
         this.props.setCurrentPage(pageNumber);
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
+        usersAPI.getPage(pageNumber, this.props.pageSize).then(response => {
             this.props.toggleIsFetching(false);
             this.props.setUsers(response.data.items);
 
