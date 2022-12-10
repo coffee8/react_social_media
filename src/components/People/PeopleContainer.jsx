@@ -40,7 +40,7 @@ class PeopleContainer extends React.Component {
         this.props.toggleIsFetching(true);
         usersAPI.getPage(pageNumber, this.props.pageSize).then(response => {
             this.props.toggleIsFetching(false);
-            this.props.setUsers(response.data.items);
+            this.props.setUsers(response.items);
 
         });
     }
