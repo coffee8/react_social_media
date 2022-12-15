@@ -11,7 +11,7 @@ const Dialogs = (props) => {
         props.sendMessage();
     }
 
-    const onUpdateMessageText = () => {
+    const onUpdateMessageText = () => { 
         props.updateMessageText(messageTextUpdate.current.value);
     }
     const dialogs = props.dialogData.map(d => <DialogItem key={d.id} name={d.name} id={d.id}/>)

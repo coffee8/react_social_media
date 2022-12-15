@@ -20,7 +20,7 @@ const ProfileContainerWithHooks = (props) => {
             .then(response => {
                 dispatch(setProfileInfo(response.data));
             });
-    }, [dispatch]);
+    }, [userId]);
 
     return <Profile profileInfo={profileInfo}/>
 

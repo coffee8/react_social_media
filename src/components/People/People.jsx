@@ -3,7 +3,7 @@ import React from "react";
 import userIcon from "../../userIcon.png";
 import {NavLink} from "react-router-dom";
 
-const People = (props) => {
+const  People = (props) => {
 
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
@@ -33,8 +33,16 @@ const People = (props) => {
                                 <div>{data.status !== null ? props.status : 'status is empty'}</div>
                                 <div>
                                     {data.followed ?
-                                        <button onClick={() => props.onToggleFollow(data.id)}>Unfollow</button> :
-                                        <button onClick={() => props.onToggleFollow(data.id)}>Follow</button>}
+                                        <button
+                                                onClick={() => {
+                                                    props.onToggleFollow(data.id)
+                                                }
+                                                }>Unfollow</button> :
+                                        <button
+                                                onClick={() => {
+                                                    props.onToggleFollow(data.id)
+                                                }
+                                                }>Follow</button>}
                                 </div>
                             </div>
                         }

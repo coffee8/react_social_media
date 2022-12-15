@@ -1,5 +1,6 @@
 .profile {
     grid-area: mainPage;
+    border: solid;
 }
 .img {
     height: 50px;
