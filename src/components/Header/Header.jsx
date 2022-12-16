@@ -3,8 +3,7 @@ import headerIcon from './fb_logo.png'
 import {NavLink} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {setAuthUserData} from "../../redux/AuthReducer";
-import {usersAPI} from "../../api/api";
+import {auth} from "../../redux/AuthReducer";
 
 const Header = () => {
 
@@ -12,10 +11,11 @@ const Header = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        usersAPI.auth().then(data => {
-            if (data.resultCode === 0)
-                dispatch(setAuthUserData(data.data))
-        })
+        // usersAPI.auth().then(data => {
+        //     if (data.resultCode === 0)
+        //         dispatch(setAuthUserData(data.data))
+        // })
+        dispatch(auth());
     }, [dispatch])
 
     return (

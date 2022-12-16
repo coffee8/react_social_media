@@ -1,8 +1,7 @@
 import React, {useEffect} from "react";
 import Profile from "./Profile";
-import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
-import {setProfileInfo} from "../../redux/ProfileReducer";
+import {getProfile} from "../../redux/ProfileReducer";
 import {useParams} from "react-router-dom";
 
 const ProfileContainerWithHooks = (props) => {
@@ -16,10 +15,7 @@ const ProfileContainerWithHooks = (props) => {
     }
 
     useEffect(() => {
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/` + userId)
-            .then(response => {
-                dispatch(setProfileInfo(response.data));
-            });
+        dispatch(getProfile(userId));
     }, [userId]);
 
     return <Profile profileInfo={profileInfo}/>
