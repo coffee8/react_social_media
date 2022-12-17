@@ -2,9 +2,13 @@ import styles from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React from "react";
+import {Navigate} from "react-router-dom";
 
 const Dialogs = (props) => {
 
+    if(!props.isAuth) {
+        return <Navigate to={'/login'}/>
+    }
     const messageTextUpdate = React.createRef();
 
     const onSendMessage = () => {
