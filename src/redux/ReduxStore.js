@@ -6,7 +6,6 @@ import profileReducer from "./ProfileReducer";
 import peopleReducer from "./PeopleReducer";
 import authReducer from "./AuthReducer";
 
-
 const reducers = combineReducers({
     dialogPage: dialogReducer,
     profilePage: profileReducer,
@@ -16,7 +15,5 @@ const reducers = combineReducers({
 
 
 const store = createStore(reducers, applyMiddleware(thunkMiddleware));
-
-window.store = store;
 
 export default store;

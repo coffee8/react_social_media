@@ -12,17 +12,17 @@ const ProfileContainerWithHooks = (props) => {
     let {userId} = useParams();
     const navigate = useNavigate();
 
-    if(!isAuth) {
-        navigate('/login');
-    }
-
     if(!userId) {
         userId = 2;
     }
 
     useEffect(() => {
+
+        if(isAuth === false) {
+            navigate('/login');
+        }
         dispatch(getProfile(userId));
-    }, [userId]);
+    }, [userId, isAuth, navigate, dispatch]);
 
     return <Profile profileInfo={profileInfo}/>
 

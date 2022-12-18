@@ -16,13 +16,21 @@ export const usersAPI = {
             .then(response => response.data)
     },
 
-    auth() {
+    authMe() {
         return instance.get('auth/me')
             .then(response => response.data)
     },
 
     getProfile(userId) {
         return instance.get(`profile/${userId}`)
+    },
+
+    login(email, password, rememberMe = false) {
+        return instance.post(`auth/login`, {email, password, rememberMe})
+    },
+
+    logout() {
+        return instance.delete(`auth/login`)
     },
 
     followUser(userId) {

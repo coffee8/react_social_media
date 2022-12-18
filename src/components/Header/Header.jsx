@@ -3,7 +3,7 @@ import headerIcon from './fb_logo.png'
 import {NavLink} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {auth} from "../../redux/AuthReducer";
+import {auth, logout} from "../../redux/AuthReducer";
 
 const Header = () => {
 
@@ -18,10 +18,15 @@ const Header = () => {
         dispatch(auth());
     }, [dispatch])
 
+    const onLogout = () => {
+        dispatch(logout());
+    }
     return (
         <div className={style.header}>
             <div className={style.login}>
-                {authData.isAuth ? authData.login : <NavLink to={'/login'}>Log in</NavLink>}
+                {authData.isAuth ?
+                    <>{authData.login} <button onClick={onLogout}>Logout</button> </>
+                    : <NavLink to={'/login'}>Login</NavLink>}
             </div>
             <div>
                 <img className={style.img} src={headerIcon} alt="logo"/>

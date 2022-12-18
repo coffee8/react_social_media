@@ -6,7 +6,7 @@ import {Navigate} from "react-router-dom";
 
 const Dialogs = (props) => {
 
-    if(!props.isAuth) {
+    if(props.isAuth === false) {
         return <Navigate to={'/login'}/>
     }
     const messageTextUpdate = React.createRef();

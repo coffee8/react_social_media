@@ -67,9 +67,10 @@ const peopleReducer = (state = initialState, action) => {
                     state.followingProgress.filter(id => id !== action.userId),
             }
         }
+        default:
+            return state;
     }
 
-    return state;
 }
 
 export const toggleFollow = (userId) => ({type: TOGGLE_FOLLOW, userId});
