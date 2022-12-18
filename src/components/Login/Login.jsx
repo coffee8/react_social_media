@@ -41,7 +41,7 @@ const Login = () => {
                                placeholder={'password'}/>
                     </div>
                     <div>
-                        <label> Remember me </label>
+                        <label> Remember me: </label>
                         <Field name={'rememberMe'}
                                component={'input'}
                                type={'checkbox'}/>

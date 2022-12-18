@@ -1,16 +1,21 @@
 .people {
     grid-area: mainPage;
-    background-color: navajowhite;
+    /*background-color: navajowhite;*/
     display: grid;
     /*grid-template-rows: 1fr 5fr;*/
     /*grid-template-columns: 1fr;*/
     /*grid-template-areas:*/
-    /*        "pages"*/
-    /*        "people";*/
 }
 
 img {
-    width: 50px;
+    width: 55px;
+}
+
+.container {
+    border: 1px solid saddlebrown;
+    margin: 5px 5px;
+    padding: 10px 30px;
+    width: 100px;
 }
 
 .page {

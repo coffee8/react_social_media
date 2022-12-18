@@ -23,14 +23,18 @@ const  People = (props) => {
             <div>
                 {
                     props.users.map((data) => {
-                            return <div>
+                            return <div className={styles.container}>
                                 <NavLink to={'./../profile/' + data.id}>
                                     <div>
-                                        <img src={data.photos.small !== null ? data.photos.small : userIcon} alt=""/>
+                                        <img src={data.photos.large !== null ? data.photos.large : userIcon} alt=""/>
                                     </div>
                                 </NavLink>
-                                <div>{data.name}</div>
-                                <div>{data.status !== null ? props.status : 'status is empty'}</div>
+                                <div>
+                                    <span>{data.name}</span>
+                                </div>
+                                <div>
+                                    <span>{data.status !== null ? props.status : 'status is empty'}</span>
+                                </div>
                                 <div>
                                     {data.followed ?
                                         <button

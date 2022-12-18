@@ -44,7 +44,7 @@ class PeopleContainer extends React.Component {
     }
 
     render() {
-        return <>   {this.props.isFetching ? <Preloader/> : null}
+        return <div>   {this.props.isFetching ? <Preloader/> : null}
             <People className={styles.people}
                     totalUsersCount={this.props.totalUsersCount}
                     pageSize={this.props.pageSize}
@@ -56,7 +56,7 @@ class PeopleContainer extends React.Component {
                     toggleFollowingProgress={this.toggleFollowingProgress}
                     isFetching={this.props.isFetching}
             />
-        </>
+        </div>
     }
 }
 
