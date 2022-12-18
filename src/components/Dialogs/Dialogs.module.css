@@ -9,13 +9,16 @@
 }
 
 .dialog {
-
+    margin: 10px 10px;
+    padding: 10px 10px;
 }
 
-.messages {
-
+.text {
+    margin: 10px 10px;
+    padding: 10px 10px;
 }
 
 .message {
-
+    margin: 10px 10px;
+    padding: 10px 10px;
 }

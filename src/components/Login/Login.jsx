@@ -27,7 +27,7 @@ const Login = () => {
             {({handleSubmit}) => (
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label> Login: </label>
+                        <label> Email: </label>
                         <Field name={'email'}
                                component={'input'}
                                type={'text'}

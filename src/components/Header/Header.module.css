@@ -1,12 +1,14 @@
 
 .header {
-    background-color: aqua;
+    /*background-color: rgb(218, 227, 226);*/
+    background-color: rgb(127, 176, 150);
     grid-area: header;
 }
 
 .img {
-    height: 50px;
-    width: 50px;
+    margin: 3px 7px;
+    height: 40px;
+    width: 40px;
 }
 
 .login {

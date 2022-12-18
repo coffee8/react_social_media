@@ -1,8 +1,10 @@
 import Post from './Post/Post';
 import React from "react";
+import styles from "./MyPosts.module.css"
 
 const MyPosts = (props) => {
-    const newPostElement = React.createRef(); //not recommended to use
+
+    const newPostElement = React.createRef();
 
     const onAddPost = () => {
         props.addPost();
@@ -18,16 +20,19 @@ const MyPosts = (props) => {
                                                    key={data.id}/>)
 
     return (
-        <div>
-            <div>My posts</div>
+        <div className={styles.posts}>
+            <h4 className={styles.postHead}>My posts</h4>
             <div>
                 <div>
-                    <textarea placeholder="your text"
+                    <textarea placeholder="Write something!"
                               ref={newPostElement}
                               onChange={onPostChange}
                               value={props.newPostText}/>
                 </div>
-                <button onClick={onAddPost}>Add post</button>
+                <div>
+                    <button onClick={onAddPost}>Add post</button>
+                </div>
+
             </div>
             <div>
                 {posts}

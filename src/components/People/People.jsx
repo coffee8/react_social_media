@@ -16,7 +16,7 @@ const  People = (props) => {
         <div>
             <div>
                 {pages.map(p => {
-                    return p < 10 ? <span className={props.currentPage === p && styles.page}
+                    return p < 21 ? <span className={props.currentPage === p && styles.page}
                                           onClick={() => props.onSetCurrentPage(p)}>{p}</span> : ''
                 })}
             </div>
@@ -30,10 +30,10 @@ const  People = (props) => {
                                     </div>
                                 </NavLink>
                                 <div>
-                                    <span>{data.name}</span>
+                                    <p>{data.name}</p>
                                 </div>
                                 <div>
-                                    <span>{data.status !== null ? props.status : 'status is empty'}</span>
+                                    <p>{data.status !== null ? props.status : 'status is empty'}</p>
                                 </div>
                                 <div>
                                     {data.followed ?

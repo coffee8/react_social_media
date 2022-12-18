@@ -18,6 +18,15 @@ img {
     width: 100px;
 }
 
-.page {
-    font-weight: bold;
+span {
+    margin: 1px 1px;
 }
+
+.page {
+    padding: 1px 1px;
+    border: 1px solid black;
+}
+
+/*.page {*/
+/*    font-weight: bold;*/
+/*}*/

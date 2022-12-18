@@ -6,7 +6,7 @@ import {Navigate} from "react-router-dom";
 
 const Dialogs = (props) => {
 
-    if(props.isAuth === false) {
+    if (props.isAuth === false) {
         return <Navigate to={'/login'}/>
     }
     const messageTextUpdate = React.createRef();
@@ -15,7 +15,7 @@ const Dialogs = (props) => {
         props.sendMessage();
     }
 
-    const onUpdateMessageText = () => { 
+    const onUpdateMessageText = () => {
         props.updateMessageText(messageTextUpdate.current.value);
     }
     const dialogs = props.dialogData.map(d => <DialogItem key={d.id} name={d.name} id={d.id}/>)
@@ -31,12 +31,14 @@ const Dialogs = (props) => {
                 {messages}
             </div>
 
-            <div>
+            <div className={styles.text}>
                 <textarea placeholder={"say something!"}
-                value={props.newMessageText}
-                ref={messageTextUpdate}
-                onChange={ onUpdateMessageText }/>
-                <button onClick={ onSendMessage }>Send</button>
+                          value={props.newMessageText}
+                          ref={messageTextUpdate}
+                          onChange={onUpdateMessageText}/>
+                <div>
+                    <button onClick={onSendMessage}>Send</button>
+                </div>
             </div>
 
         </div>

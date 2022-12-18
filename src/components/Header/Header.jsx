@@ -21,12 +21,13 @@ const Header = () => {
     const onLogout = () => {
         dispatch(logout());
     }
+
     return (
         <div className={style.header}>
             <div className={style.login}>
                 {authData.isAuth ?
                     <>{authData.login} <button onClick={onLogout}>Logout</button> </>
-                    : <NavLink to={'/login'}>Login</NavLink>}
+                    : <NavLink to={'/login'}><button>Login</button></NavLink>}
             </div>
             <div>
                 <img className={style.img} src={headerIcon} alt="logo"/>

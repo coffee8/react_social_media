@@ -1,9 +1,3 @@
 .profile {
     grid-area: mainPage;
-    border: solid;
-}
-.img {
-    height: 50px;
-    width: 50px;
-    border-radius: 30px;
 }
