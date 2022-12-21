@@ -37,12 +37,12 @@ const  People = (props) => {
                                 </div>
                                 <div>
                                     {data.followed ?
-                                        <button
+                                        <button className={styles.button}
                                                 onClick={() => {
                                                     props.onToggleFollow(data.id)
                                                 }
                                                 }>Unfollow</button> :
-                                        <button
+                                        <button className={styles.button}
                                                 onClick={() => {
                                                     props.onToggleFollow(data.id)
                                                 }

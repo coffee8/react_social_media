@@ -18,19 +18,19 @@ const ProfileInfo = (props) => {
             </div>
             <div>
                 <span>
-                    {'Name: ' + props.profileInfo.fullName}
+                    {props.profileInfo.fullName}
                 </span>
             </div>
             <div>
                 <span>
-                    {`About me:  ${props.profileInfo.aboutMe === null ?
-                        props.profileInfo.aboutMe : 'nothing yet'}`}
+                    {`${props.profileInfo.aboutMe === null ?
+                        props.profileInfo.aboutMe : 'Happy react developer ^^'}`}
                 </span>
             </div>
             <div>
                 <span>
-                    {`Looking for a job: ${props.profileInfo.lookingForAJob ?
-                        'yes' : 'no'}`}
+                    {`${props.profileInfo.lookingForAJob ?
+                        'Looking for a job!' : 'I\'m employed!'}`}
                 </span>
             </div>
 

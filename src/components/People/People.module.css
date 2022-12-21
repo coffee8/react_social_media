@@ -1,10 +1,6 @@
 .people {
     grid-area: mainPage;
-    /*background-color: navajowhite;*/
     display: grid;
-    /*grid-template-rows: 1fr 5fr;*/
-    /*grid-template-columns: 1fr;*/
-    /*grid-template-areas:*/
 }
 
 img {
@@ -12,10 +8,12 @@ img {
 }
 
 .container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: 1px solid saddlebrown;
     margin: 5px 5px;
     padding: 10px 30px;
     width: 100px;
+    text-align: center;
 }
 
 span {
@@ -27,6 +25,19 @@ span {
     border: 1px solid black;
 }
 
-/*.page {*/
-/*    font-weight: bold;*/
-/*}*/
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 2px;
+    color: #476b6b;
+    background-color: #e0ebeb;
+    text-align: center;
+    cursor: pointer;
+    width: 70%;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
