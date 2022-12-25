@@ -33,7 +33,7 @@ const  People = (props) => {
                                     <p>{data.name}</p>
                                 </div>
                                 <div>
-                                    <p>{data.status !== null ? props.status : 'status is empty'}</p>
+                                    <p>{data.status !== null ? props.status : 'Hey Hi'}</p>
                                 </div>
                                 <div>
                                     {data.followed ?

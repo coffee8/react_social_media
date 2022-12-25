@@ -3,6 +3,7 @@ import {Form, Field} from "react-final-form";
 import {useDispatch, useSelector} from "react-redux";
 import {login} from "../../redux/AuthReducer";
 import {Navigate} from "react-router-dom";
+import style from "./Login.module.css"
 
 const Login = () => {
 
@@ -46,7 +47,7 @@ const Login = () => {
                                component={'input'}
                                type={'checkbox'}/>
                     </div>
-                    <button name={'submit'} type={'submit'}>Submit</button>
+                    <button name={'submit'} type={'submit'} className={style.button}>Submit</button>
                 </form>
             )}
         </Form>

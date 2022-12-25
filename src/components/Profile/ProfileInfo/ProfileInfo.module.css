@@ -1,14 +1,126 @@
-.profile {
+/*.profile {*/
+/*    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.5);*/
+/*    margin: 5px auto;*/
+/*    max-width: 20%;*/
+/*    height: 250px;*/
+/*    !*max-height: 40%;*!*/
+/*    text-align: center;*/
+/*    background-color: #85adad;*/
+/*}*/
+
+/*.image {*/
+/*    height: 150px;*/
+/*    width: 213px;*/
+/*    !*border-radius: 10%;*!*/
+/*}*/
+
+/*.icon {*/
+/*    width: 20px;*/
+/*    opacity: 1;*/
+/*    transition: opacity 0.2s;*/
+
+/*}*/
+
+/*.icon:hover {*/
+/*    opacity: 0.75;*/
+/*}*/
+
+/*.buttonContact {*/
+/*    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.5);*/
+/*    height: 35px;*/
+/*    !*margin-top: 6px;*!*/
+/*    border: none;*/
+/*    outline: 0;*/
+/*    display: inline-block;*/
+/*    color: #85adad;*/
+/*    background-color: black;*/
+/*    text-align: center;*/
+/*    cursor: pointer;*/
+/*    width: 100%;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.buttonContact:hover {*/
+/*    opacity: 0.75;*/
+/*}*/
+
+/*.name {*/
+/*    display: inline-block;*/
+/*    font-size: 18px;*/
+/*    font-weight: 550;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*.aboutMe {*/
+/*    display: inline-block;*/
+/*    font-size: 15px ;*/
+/*    font-weight: 450;*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+.main__profilecard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 10px 10px;
-    padding: 10px 10px;
-    width: 30%;
-    text-align: center;
-    background-color: #85adad;
+    flex: 1 1 auto;
+    max-width: 350px;
+    min-height: 300px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.main__profilecardimage {
+
+}
+.main__profilecardimage img {
+    width: 100%;
+    object-fit: cover;
+}
+.main__profilecardinfo {
+
 }
 
-.image {
-    height: 100px;
-    width: 100px;
-    border-radius: 10%;
+.main__name {
+    font-size: 24px;
+    padding: 5px 0 10px 0;
+    font-weight: 500;
+}
+
+.main__status {
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.main__occupation {
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.main__links {
+    margin: 5px 0;
+}
+
+.main__profilecardinfo a {
+    opacity: 1;
+}
+.main__profilecardinfo a:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s linear;
+
+}
+.main__profilecardinfo img {
+    width: 24px;
+}
+
+.main__button {
+    border: none;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+}
+
+.main__button:hover {
+    opacity: 0.8;
 }

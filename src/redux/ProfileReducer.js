@@ -6,9 +6,7 @@ const SET_PROFILE_INFO = 'SET_PROFILE_INFO';
 
 const initialState = {
     postData:
-        [{message: 'hi', likeCount: 25, id: 1},
-            {message: 'I am excited about react!', likeCount: 3, id: 2},
-            {message: 'react is cool', likeCount: 12, id: 3}],
+        [{message: 'I am excited about React!', likeCount: 3, id: 1}],
     newPostText: '',
     profileInfo: null,
 }
