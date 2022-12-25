@@ -34,28 +34,28 @@ const Content = () => {
         <div className={styles.main}>
             <div className={styles.container}>
                 <div className={styles.main__column}>
-                    <div className={styles.main__profilecard}>
-                        <div className={styles.main__profilecardimage}>
-                            <img src={profilePhoto} alt="profile photo"/>
-                        </div>
-                        <div className={styles.main__profilecardinfo}>
-                            <p className={styles.main__name}>My Name</p>
-                            <p className={styles.main__status}>My status Lorem ipsum dolor sit amet. Lorem ipsum dolor
-                                sit
-                                amet. Lorem ipsum dolor sit amet.</p>
-                            <p className={styles.main__occupation}>My occupation</p>
-                            <div className={styles.main__links}>
-                                <a href="#"><img src={fbIcon} alt="fb icon"/></a>
-                                <a href="#"><img src={ghIcon} alt="gh icon"/></a>
-                                <a href="#"><img src={liIcon} alt="li icon"/></a>
-                                <a href="#"><img src={twIcon} alt="tw icon"/></a>
-                            </div>
-                            <div>
-                                <button className={styles.main__button}>Contact</button>
-                            </div>
-                        </div>
-                    </div>
-
+                    {/*<div className={styles.main__profilecard}>*/}
+                    {/*    <div className={styles.main__profilecardimage}>*/}
+                    {/*        <img src={profilePhoto} alt="profile photo"/>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={styles.main__profilecardinfo}>*/}
+                    {/*        <p className={styles.main__name}>My Name</p>*/}
+                    {/*        <p className={styles.main__status}>My status Lorem ipsum dolor sit amet. Lorem ipsum dolor*/}
+                    {/*            sit*/}
+                    {/*            amet. Lorem ipsum dolor sit amet.</p>*/}
+                    {/*        <p className={styles.main__occupation}>My occupation</p>*/}
+                    {/*        <div className={styles.main__links}>*/}
+                    {/*            <a href="#"><img src={fbIcon} alt="fb icon"/></a>*/}
+                    {/*            <a href="#"><img src={ghIcon} alt="gh icon"/></a>*/}
+                    {/*            <a href="#"><img src={liIcon} alt="li icon"/></a>*/}
+                    {/*            <a href="#"><img src={twIcon} alt="tw icon"/></a>*/}
+                    {/*        </div>*/}
+                    {/*        <div>*/}
+                    {/*            <button className={styles.main__button}>Contact</button>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    <ProfileContainerWithHooks />
                     <div className={styles.main__postcontainer}>
                         <div className={styles.main__userprofile}>
                             <img src={profilePhoto} alt=""/>
