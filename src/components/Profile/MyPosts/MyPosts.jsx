@@ -1,4 +1,4 @@
-import Post from './Post/Post';
+import Post from "./Post/Post";
 import React from "react";
 import styles from "./MyPosts.module.css"
 import profilePhoto from "../../Common/profile_photo3.jpeg";
@@ -22,37 +22,20 @@ const MyPosts = (props) => {
                                                    key={data.id}/>)
 
     return (
-        // <div className={styles.posts}>
-        //     <h4 className={styles.postHead}>My posts</h4>
-        //     <div>
-        //         <div>
-        //             <textarea placeholder="Write something!"
-        //                       ref={newPostElement}
-        //                       onChange={onPostChange}
-        //                       value={props.newPostText}/>
-        //         </div>
-        //         <div>
-        //             <button onClick={onAddPost}>Add post</button>
-        //         </div>
-        //
-        //     </div>
-        //     <div>
-        //         {posts}
-        //     </div>
-        // </div>
-
     <div className={styles.main__postcontainer}>
         <div className={styles.main__userprofile}>
-            <img src={profilePhoto} alt=""/>
-            <p>My name</p>
+            <img src={profilePhoto} alt="profile photo"/>
+            <p>{"Sarah K"}</p>
         </div>
         <div className={styles.main__postinputcontainer}>
-            <textarea placeholder="Say!" rows="2"></textarea>
-            <button><img src={sendIcon} alt=""/></button>
+            <textarea placeholder={`   Say something!`}
+                      rows="2"
+                      ref={newPostElement}
+                      onChange={onPostChange}
+                      value={props.newPostText}></textarea>
+            <button onClick={onAddPost}><img src={sendIcon} alt=""/></button>
         </div>
-
         {posts}
-
     </div>
     )
 }

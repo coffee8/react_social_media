@@ -1,20 +1,4 @@
 
-/*.header {*/
-/*    !*background-color: rgb(218, 227, 226);*!*/
-/*    background-color: rgb(127, 176, 150);*/
-/*    grid-area: header;*/
-/*}*/
-
-/*.img {*/
-/*    margin: 3px 7px;*/
-/*    height: 40px;*/
-/*    width: 40px;*/
-/*}*/
-
-/*.login {*/
-/*    float: right;*/
-/*}*/
-
 /*.button {*/
 /*    background-color: #fff;*/
 /*    border: 1px solid #d5d9d9;*/
@@ -65,26 +49,26 @@
     border-radius: 3px;
 }
 
-.header__nav {
-    display: flex;
-}
+/*.header__nav {*/
+/*    display: flex;*/
+/*}*/
 
-.header__nav a {
-    color: #ffffff;
-    margin-left: 20px;
-    opacity: 0.75;
-    transition: opacity 0.2s linear;
-}
+/*.header__nav a {*/
+/*    color: #ffffff;*/
+/*    margin-left: 20px;*/
+/*    opacity: 0.75;*/
+/*    transition: opacity 0.2s linear;*/
+/*}*/
 
-.header__nav a:hover {
-    text-decoration: underline;
-    opacity: 1;
-}
+/*.header__nav a:hover {*/
+/*    text-decoration: underline;*/
+/*    opacity: 1;*/
+/*}*/
 
-.header__nav a:first-child {
-    margin-left: 0;
-}
+/*.header__nav a:first-child {*/
+/*    margin-left: 0;*/
+/*}*/
 
-.header__nav a:last-child {
-    margin-right: 30px;
-}
+/*.header__nav a:last-child {*/
+/*    margin-right: 30px;*/
+/*}*/

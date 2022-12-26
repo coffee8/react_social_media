@@ -1,26 +1,29 @@
-.navbar {
-    grid-area: navbar;
-    padding: 25px 10px;
-    background-color: rgb(218, 227, 226);
-}
 
-.item {
-    padding: 10px 0;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-.link {
-    text-decoration: none;
-    opacity: 1;
-    transition: opacity 0.2s;
-    color: darkblue;
-}
-
-.link:hover {
-    opacity: 0.9;
-}
-
-.activeStyle {
+.activeLink {
     color: brown;
+}
+
+
+.header__nav {
+    display: flex;
+}
+
+.header__nav a {
+    color: #ffffff;
+    margin-left: 20px;
+    opacity: 0.75;
+    transition: opacity 0.2s linear;
+}
+
+.header__nav a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.header__nav a:first-child {
+    margin-left: 0;
+}
+
+.header__nav a:last-child {
+    margin-right: 30px;
 }
