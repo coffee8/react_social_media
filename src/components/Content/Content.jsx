@@ -56,27 +56,28 @@ const Content = () => {
                     {/*    </div>*/}
                     {/*</div>*/}
                     <ProfileContainerWithHooks />
-                    <div className={styles.main__postcontainer}>
-                        <div className={styles.main__userprofile}>
-                            <img src={profilePhoto} alt=""/>
-                            <p>My name</p>
-                        </div>
-                        <div className={styles.main__postinputcontainer}>
-                            <textarea placeholder="Say!" rows="2"></textarea>
-                            <button><img src={sendIcon} alt=""/></button>
-                        </div>
-                    </div>
 
-                    <div className={styles.main__postscontainer}>
-                        <div className={styles.main__userprofile}>
-                            <img src={profilePhoto} alt=""/>
-                            <p>My name</p>
-                        </div>
-                        <p className={styles.main__posttext}>rastLorem, ipsum dolor sit amet consectetur adipisicing
-                            elit.
-                            Deserunt dolorum delectus placeat ducimus rem iusto fugiat
-                            vel cumque debitis impedit.</p>
-                    </div>
+                    {/*<div className={styles.main__postcontainer}>*/}
+                    {/*    <div className={styles.main__userprofile}>*/}
+                    {/*        <img src={profilePhoto} alt=""/>*/}
+                    {/*        <p>My name</p>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={styles.main__postinputcontainer}>*/}
+                    {/*        <textarea placeholder="Say!" rows="2"></textarea>*/}
+                    {/*        <button><img src={sendIcon} alt=""/></button>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+
+                    {/*<div className={styles.main__postscontainer}>*/}
+                    {/*    <div className={styles.main__userprofile}>*/}
+                    {/*        <img src={profilePhoto} alt=""/>*/}
+                    {/*        <p>My name</p>*/}
+                    {/*    </div>*/}
+                    {/*    <p className={styles.main__posttext}>rastLorem, ipsum dolor sit amet consectetur adipisicing*/}
+                    {/*        elit.*/}
+                    {/*        Deserunt dolorum delectus placeat ducimus rem iusto fugiat*/}
+                    {/*        vel cumque debitis impedit.</p>*/}
+                    {/*</div>*/}
 
                 </div>
             </div>
