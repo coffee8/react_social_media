@@ -27,3 +27,17 @@
 .header__nav a:last-child {
     margin-right: 30px;
 }
+
+.header__nav div {
+    margin: 0 30px;
+}
+
+
+.userName {
+    display: inline-block;
+    color: #ffffff;
+}
+
+.userName button {
+    margin-left: 30px;
+}

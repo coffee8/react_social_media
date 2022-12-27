@@ -29,9 +29,9 @@ const Navbar = () => {
             </NavLink>
             <div>
                 {authData.isAuth ?
-                    <>{authData.login}
+                    <span className={styles.userName}>{authData.login}
                         <button onClick={onLogout} className={styles.button}>Logout</button>
-                    </>
+                    </span>
                     : <NavLink to={"/login"}>
                         <button className={styles.button}> Login</button>
                     </NavLink>}

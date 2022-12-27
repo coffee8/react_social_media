@@ -1,3 +1,37 @@
+
+.loginPage {
+    min-width: 250px;
+    min-height: 250px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.loginMessage {
+    margin: 10px 0;
+    color: #000000;
+    font-weight: 550;
+    font-size: 18px;
+}
+
+.field {
+    margin: 5px 10px;
+    height: 30px;
+    width: calc(100% - 20px);
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #cccccccc;
+    cursor: pointer;
+}
+
+.field:focus {
+    border-bottom: solid 1px #000000;
+}
+.fieldCheckbox {
+    cursor: pointer;
+}
 .button {
     background-color: #fff;
     border: 1px solid #d5d9d9;
@@ -10,12 +44,10 @@
     font-size: 13px;
     line-height: 18px;
     padding: 0 10px 0 11px;
+    margin: 5px 5px;
     position: relative;
     text-align: center;
     text-decoration: none;
     user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle;
     width: 70px;
 }

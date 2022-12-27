@@ -19,33 +19,37 @@ const Login = () => {
         dispatch(login({
             email: values.email,
             password: values.password,
-            rememberMe: values.rememberMe}))
+            rememberMe: values.rememberMe
+        }))
     }
 
-    return <div>
-        <div>Please login</div>
+    return <div className={style.loginPage}>
+        <h4 className={style.loginMessage}>Please login</h4>
         <Form onSubmit={onSubmit}>
             {({handleSubmit}) => (
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label> Email: </label>
                         <Field name={'email'}
                                component={'input'}
                                type={'text'}
-                               placeholder={'email'}/>
+                               placeholder={'email'}
+                               className={style.field}
+                        />
                     </div>
                     <div>
-                        <label> Password: </label>
                         <Field name={'password'}
                                component={'input'}
                                type={'password'}
-                               placeholder={'password'}/>
+                               placeholder={'password'}
+                               className={style.field}/>
                     </div>
                     <div>
                         <label> Remember me: </label>
                         <Field name={'rememberMe'}
                                component={'input'}
-                               type={'checkbox'}/>
+                               type={'checkbox'}
+                                className={style.fieldCheckbox}
+                        />
                     </div>
                     <button name={'submit'} type={'submit'} className={style.button}>Submit</button>
                 </form>
