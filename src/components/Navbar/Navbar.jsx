@@ -27,7 +27,7 @@ const Navbar = () => {
                      to={"/dialogs"}>
                 Dialogs
             </NavLink>
-            <div>
+            <div className={styles.login}>
                 {authData.isAuth ?
                     <span className={styles.userName}>{authData.login}
                         <button onClick={onLogout} className={styles.button}>Logout</button>

@@ -20,12 +20,6 @@ class PeopleContainer extends React.Component {
 
     componentDidMount() {
         this.props.getUsers(this.props.currentPage, this.props.pageSize);
-        // this.props.toggleIsFetching(true);
-        // usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
-        //     this.props.toggleIsFetching(false);
-        //     this.props.setUsers(data.items);
-        //     this.props.setTotalUsersCount(data.totalCount);
-        // });
     }
 
     onToggleFollow = (id) => {
@@ -34,13 +28,6 @@ class PeopleContainer extends React.Component {
 
     onSetCurrentPage = (pageNumber) => {
         this.props.getUsers(pageNumber, this.props.pageSize)
-        // this.props.setCurrentPage(pageNumber);
-        // this.props.toggleIsFetching(true);
-        // usersAPI.getPage(pageNumber, this.props.pageSize).then(response => {
-        //     this.props.toggleIsFetching(false);
-        //     this.props.setUsers(response.items);
-        //
-        // });
     }
 
     render() {

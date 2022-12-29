@@ -3,11 +3,16 @@
     display: flex;
 }
 
-.header__nav a {
+.link {
     color: #ffffff;
     margin-left: 20px;
     opacity: 0.75;
     transition: opacity 0.2s linear;
+}
+
+.activeLink {
+    color: #ffffff;
+    margin-left: 20px;
 }
 
 .header__nav a:hover {
@@ -31,9 +36,11 @@
 .userName {
     display: inline-block;
     color: #ffffff;
+    text-align: center;
 }
 
 .button {
+    margin-left: 5px;
     background-color: #fff;
     border: 1px solid #d5d9d9;
     border-radius: 8px;
