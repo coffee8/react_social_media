@@ -1,6 +1,6 @@
 import styles from "./People.module.css";
 import React from "react";
-import userIcon from "../../userIcon.png";
+import userIcon from "../Common/blank-profile-photo.png";
 import {NavLink} from "react-router-dom";
 
 const People = (props) => {
@@ -14,9 +14,9 @@ const People = (props) => {
 
     return (
         <div>
-            <div>
+            <div className={styles.page}>
                 {pages.map(p => {
-                    return p < 21 ? <span className={props.currentPage === p && styles.page}
+                    return p < 21 ? <span className={props.currentPage === p && styles.selectedPage}
                                           onClick={() => props.onSetCurrentPage(p)}>{p}</span> : ''
                 })}
             </div>
@@ -35,7 +35,7 @@ const People = (props) => {
                                         <div className={styles.peopleBody}>
                                             <p className={styles.name}>{data.name}</p>
                                             <p className={styles.status}>{data.status !== null ? props.status : 'Hey Hi'}</p>
-                                            <div>
+                                            <div className={styles.btn}>
                                                 {data.followed ?
                                                     <button className={styles.button}
                                                             onClick={() => {

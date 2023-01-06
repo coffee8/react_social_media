@@ -12,25 +12,26 @@ const instance = axios.create({
 export const usersAPI = {
 
     getUsers(currentPage = 1, pageSize = 5) {
-        return instance.get(`users?page=${currentPage}&count=${pageSize}`)
-            .then(response => response.data)
+        return  instance.get(`users?page=${currentPage}&count=${pageSize}`)
+            .then(response => response.data);
     },
 
     authMe() {
         return instance.get('auth/me')
-            .then(response => response.data)
+            .then(response => response.data);
+
     },
 
     getProfile(userId) {
-        return instance.get(`profile/${userId}`)
+        return instance.get(`profile/${userId}`);
     },
 
     login(email, password, rememberMe = false) {
-        return instance.post(`auth/login`, {email, password, rememberMe})
+        return instance.post(`auth/login`, {email, password, rememberMe});
     },
 
     logout() {
-        return instance.delete(`auth/login`)
+        return instance.delete(`auth/login`);
     },
 
     followUser(userId) {
@@ -39,6 +40,5 @@ export const usersAPI = {
 
     unfollowUser(userId) {
         return instance.delete(`follow/${userId}`)
-    }
-
+    },
 }

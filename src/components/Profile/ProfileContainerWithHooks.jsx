@@ -22,6 +22,7 @@ const ProfileContainerWithHooks = (props) => {
             navigate('/login');
         }
         dispatch(getProfile(userId));
+
     }, [userId, isAuth, navigate, dispatch]);
 
     return <Profile profileInfo={profileInfo}/>

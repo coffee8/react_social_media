@@ -22,12 +22,12 @@ const MyPosts = (props) => {
                                                    key={data.id}/>)
 
     return (
-    <div className={styles.main__postcontainer}>
-        <div className={styles.main__userprofile}>
+    <div className={styles.postContainer}>
+        <div className={styles.userProfile}>
             <img src={profilePhoto} alt="profile photo"/>
             <p>{"Sarah K"}</p>
         </div>
-        <div className={styles.main__postinputcontainer}>
+        <div className={styles.postInputContainer}>
             <textarea placeholder={`   Say something!`}
                       rows="2"
                       ref={newPostElement}

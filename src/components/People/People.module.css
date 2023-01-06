@@ -45,6 +45,9 @@
     margin: 15px 0;
 }
 
+.btn {
+    margin: 40px 5px 5px 5px;
+}
 .button {
     background-color: #ffffff;
     border: 1px solid #d5d9d9;
@@ -62,3 +65,12 @@
     width: 70px;
 }
 
+.page span {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.selectedPage {
+    font-weight: 550;
+    border-bottom: 1px solid;
+}

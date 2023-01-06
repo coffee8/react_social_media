@@ -47,7 +47,7 @@ export const onPostChangeActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT,
 export const setProfileInfo = (profileInfo) => ({type: SET_PROFILE_INFO, profileInfo});
 
 export const getProfile = (userId) => (dispatch) => {
-    usersAPI.getProfile(userId).then(response => dispatch(setProfileInfo(response.data)))
+    usersAPI.getProfile(userId).then(response => dispatch(setProfileInfo(response.data)));
 }
 
 export default profileReducer;

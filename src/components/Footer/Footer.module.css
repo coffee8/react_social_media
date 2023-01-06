@@ -1,9 +1,3 @@
-/*.footer {*/
-/*    background-color: darkcyan;*/
-/*    grid-area: footer;*/
-/*    text-align: center;*/
-/*    padding: 10px;*/
-/*}*/
 
 .container {
     max-width: 1280px;
@@ -14,14 +8,14 @@
     background-color: #000;
 }
 
-.footer__row {
+.footerRow {
     display: flex;
     height: 40px;
     justify-content: center;
     align-items: center;
 }
 
-.footer__text {
+.footerText {
     color: #ffffff;
     font-size: 12px;
 }

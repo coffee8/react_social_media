@@ -1,6 +1,7 @@
 
-.header__nav {
+.nav {
     display: flex;
+    align-items: center;
 }
 
 .link {
@@ -13,22 +14,23 @@
 .activeLink {
     color: #ffffff;
     margin-left: 20px;
+    border-bottom: 1px solid #ffffff;
 }
 
-.header__nav a:hover {
+.nav a:hover {
     text-decoration: underline;
     opacity: 1;
 }
 
-.header__nav a:first-child {
+.nav a:first-child {
     margin-left: 0;
 }
 
-.header__nav a:last-child {
+.nav a:last-child {
     margin-right: 30px;
 }
 
-.header__nav div {
+.nav div {
     margin: 0 30px;
 }
 

@@ -1,4 +1,4 @@
-.main__postscontainer {
+.postsContainer {
     width: 100%;
     max-width: 350px;
     background-color: #ffffff;
@@ -8,18 +8,18 @@
     color: #000;
 }
 
-.main__posttext {
+.postText {
     font-size: 15px;
     margin-top: 5px;
     text-align: left;
 }
 
-.main__userprofile {
+.userProfile {
     display: flex;
     align-items: center;
 }
 
-.main__userprofile img {
+.userProfile img {
     width: 50px;
     border-radius: 50%;
     margin: 0 10px 0 0;

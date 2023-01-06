@@ -1,4 +1,4 @@
-.main__postcontainer {
+.postContainer {
     width: 100%;
     max-width: 350px;
     background-color: #ffffff;
@@ -7,30 +7,30 @@
     margin-top: 10px;
     color: #000;
 }
-.main__userprofile {
+.userProfile {
     display: flex;
     align-items: center;
 }
 
-.main__userprofile img {
+.userProfile img {
     width: 60px;
     border-radius: 50%;
     margin: 0 10px 0 0;
     aspect-ratio: 1;
 }
 
-.main__userprofile p {
+.userProfile p {
     margin-bottom: -5px;
     font-weight: 500;
 }
 
-.main__postinputcontainer {
+.postInputContainer {
     display: flex;
     flex: 1 1 auto;
     margin-top: 5px;
 }
 
-.main__postinputcontainer textarea {
+.postInputContainer textarea {
     width: 85%;
     border: 0;
     outline: 0;
@@ -38,12 +38,12 @@
     resize: none;
 }
 
-.main__postinputcontainer button {
+.postInputContainer button {
     flex: 0 0 auto;
     padding-left: 10px;
     background-color: #ffffff;
 }
 
-.main__postinputcontainer img {
+.postInputContainer img {
     width: 32px;
 }
